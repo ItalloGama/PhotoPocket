@@ -52,3 +52,4 @@ Users will be able to register, login and navigate from their user profile. User
 - [ ] Integrate Cloudinary or AWS S3 to allow the user to upload their own image files
 - [ ] Add a new table that gives the user the ability to follow other users
 - [ ] Alternate color themes to give the user more creative control
+- [ ]
