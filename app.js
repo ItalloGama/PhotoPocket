@@ -16,3 +16,6 @@ app.use('/auth', AuthRouter)
 app.use('/photos', PostRouter)
 
 app.listen(PORT, () => console.log(`Server Running On Port: ${PORT}`))
+
+
+
