@@ -1,5 +1,6 @@
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
+require('dotenv').config()
 const SALT_ROUNDS = parseInt(process.env.SALT_ROUNDS)
 const APP_SECRET = process.env.APP_SECRET
 
@@ -21,6 +22,7 @@ const comparePassword = async (storedPassword, password) => {
 
 const createToken = (payload) => {
   // Accepts a payload with which to create the token
+  console.log(payload)
   let token = jwt.sign(payload, APP_SECRET)
   //   Generates the token and encrypts it, returns the token when the process finishes
   return token
