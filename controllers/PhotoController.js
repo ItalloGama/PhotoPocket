@@ -35,7 +35,7 @@ const DeletePhoto = async (req, res) => {
   try {
     await PictureCard.destroy({ where: { id: req.params.photo_id } })
     res.send({
-      msg: 'Post Deleted',
+      msg: 'Photo Deleted',
       payload: req.params.photo_id,
       status: 'Ok'
     })
