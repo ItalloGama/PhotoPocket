@@ -8,17 +8,17 @@ router.post(
   middleware.verifyToken,
   controller.CreatePhoto
 )
-// router.put(
-//   '/:photo_id',
-//   middleware.stripToken,
-//   middleware.verifyToken,
-//   controller.UpdatePhoto
-// )
-// router.delete(
-//   '/:photo_id',
-//   middleware.stripToken,
-//   middleware.verifyToken,
-//   controller.DeletePhoto
-// )
+router.put(
+  '/:photo_id',
+  middleware.stripToken,
+  middleware.verifyToken,
+  controller.UpdatePhoto
+)
+router.delete(
+  '/:photo_id',
+  middleware.stripToken,
+  middleware.verifyToken,
+  controller.DeletePhoto
+)
 
 module.exports = router
