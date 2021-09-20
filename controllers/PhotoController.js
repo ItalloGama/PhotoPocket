@@ -11,6 +11,7 @@ const GetPhotos = async (req, res) => {
 
 const CreatePhoto = async (req, res) => {
   try {
+    let user_id = req.params.user_id
     const photo = await PictureCard.create({ ...req.body })
     res.send(photo)
   } catch (error) {
