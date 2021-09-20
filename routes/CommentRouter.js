@@ -6,16 +6,16 @@ router.post(
   '/:user_id/:photo_id',
   middleware.stripToken,
   middleware.verifyToken,
-  controller.CreatePhoto
+  controller.CreateComment
 )
 router.put(
-  '/:user_id/:photo_id',
+  '/:comment_id',
   middleware.stripToken,
   middleware.verifyToken,
   controller.UpdateComment
 )
 router.delete(
-  '/:user_id/:photo_id',
+  '/:comment_id',
   middleware.stripToken,
   middleware.verifyToken,
   controller.DeleteComment
