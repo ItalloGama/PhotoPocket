@@ -8,8 +8,8 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Comment.belongsTo(models.User, { foriegnKey: 'userId' })
-      Comment.belongsTo(models.PictureCard, { foriegnKey: 'pictureCardId' })
+      Comment.belongsTo(models.User, { foreignKey: 'userId' })
+      Comment.belongsTo(models.PictureCard, { foreignKey: 'pictureCardId' })
     }
   }
   Comment.init(
@@ -17,6 +17,7 @@ module.exports = (sequelize, DataTypes) => {
       userId: {
         type: DataTypes.INTEGER,
         onDelete: 'CASCADE',
+        field: 'userId',
         references: {
           model: 'users',
           key: 'id'
@@ -25,6 +26,7 @@ module.exports = (sequelize, DataTypes) => {
       pictureCardId: {
         type: DataTypes.INTEGER,
         onDelete: 'CASCADE',
+        field: 'pictureCardId',
         references: {
           model: 'picture_cards',
           key: 'id'

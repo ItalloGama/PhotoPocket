@@ -9,12 +9,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       User.hasMany(models.PictureCard, {
-        foreignKey: 'userId',
-        as: 'picture_cards'
+        foreignKey: 'userId'
       })
       User.hasMany(models.Comment, {
-        foreignKey: 'userId',
-        as: 'comments'
+        foreignKey: 'userId'
       })
     }
   }

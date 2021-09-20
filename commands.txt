@@ -1,0 +1,14 @@
+npm init -y 
+npm i pg sequelize express cors body-parser bcrypt jsonwebtoken morgam dotenv
+npm i --save-dev nodemon faker
+
+///////////////////////////////////////
+in package.json
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  /////////////////////////////////////
+  sequelize init
+  ////////////////////////////////////
+  
