@@ -1,32 +1,28 @@
-import React {useState,useEffect} from 'react'
+import { React, useState } from 'react'
 import AboutMeForm from '../components/AboutMeForm'
 import axios from 'axios'
-import { useEffect } from 'react'
-
-
 
 const AboutMe = () => {
-const [aboutme, setAboutme] = useState([])
-  
-const postAboutMe = async () => {
-  const res = await axios.post('')
-  setAboutMe
-}
-useEffect(() => {
-  getAboutMe()
-}, [])
+  const [aboutme, setAboutme] = useState([])
 
-consthandleSubmit = (e) => {
-  setFormValues({...formValues,[e.target.value]:e.target.value})
-}
+  const postAboutMe = (e) => {
+    console.log('Posted')
+  }
 
-return (
+  const handleSubmit = (e) => {
+    setFormValues({ ...formValues, [e.target.value]: e.target.value })
+  }
 
+  return (
     <div>
       Tell us about yourself.
       <div>
-    <AboutMeForm
-    />
+        <AboutMeForm
+          userName={aboutMe.name}
+          postContent={aboutMe.content}
+          handleSubmit={handleSubmit}
+          postAboutMe={postAboutMe}
+        />
       </div>
     </div>
   )
