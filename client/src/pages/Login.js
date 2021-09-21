@@ -16,7 +16,9 @@ export default function Login(props) {
     setFormValues({ email: '', password: '' })
     props.setUser(payload)
     props.toggleAuthenticated(true)
-    return <Redirect to="/user" />
+    console.log(payload)
+    props.history.push('/user')
+    // return <Redirect to="/user" />
   }
 
   return (
