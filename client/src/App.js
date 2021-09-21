@@ -58,7 +58,9 @@ function App() {
           authenticated={authenticated}
           user={user}
           path="/user"
-          component={User}
+          component={(props) => (
+            <User {...props} authenticated={authenticated} user={user} />
+          )}
         />
       </Switch>
     </div>
