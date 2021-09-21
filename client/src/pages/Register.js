@@ -8,23 +8,30 @@ const iState = {
   newPassword: ''
 }
 
-const Register = () => {
+const Register = (props) => {
   const [formValues, setFormValues] = useState(iState)
 
   const handleChange = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value })
   }
 
-  const postNewUser = (e) => {
-    console.log('User Posted')
+  const postNewUser = async (e) => {
+    e.preventDefault()
+    await RegisterUser({
+      name: formValues.newName,
+      email: formValues.newEmail,
+      password: formValues.newPassword
+    })
+    // setFormValues(iState)
+    // props.history.push('/login')
   }
 
   return (
     <div className="page">
       <RegisterForm
-        newName={formValues.name}
-        newEmail={formValues.email}
-        newPassword={formValues.password}
+        newName={formValues.newName}
+        newEmail={formValues.newEmail}
+        newPassword={formValues.newPassword}
         handleChange={handleChange}
         postNewUser={postNewUser}
       />
