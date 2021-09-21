@@ -46,6 +46,7 @@ Users will be able to register, login and navigate from their user profile. User
 
 - [Bootstrap](https://getbootstrap.com/)
 - [Stack Overflow](https://stackoverflow.com/)
+- [Figma](https://www.figma.com/file/J9hSvvWe8ERhaKt44vYk4D/Untitled?node-id=0%3A1)
 
 > ## _Future Updates_
 
