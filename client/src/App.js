@@ -17,7 +17,7 @@ function App() {
     setUser(session)
     toggleAuthenticated(true)
   }
-
+  // log out
   const handleLogOut = () => {
     //Reset all auth related state and clear localstorage
     setUser(null)
