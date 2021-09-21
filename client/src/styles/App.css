@@ -1,7 +1,7 @@
 .App {
   text-align: center;
 }
-
+/* NAVIGATION */
 .nav-bar {
   display: flex;
   align-items: center;
@@ -12,11 +12,9 @@
   width: 100vw;
   height: 50px;
 }
-
 .me-auto .navbar-nav {
   display: flex;
 }
-
 a {
   margin: 0 20px;
   text-decoration: none;
