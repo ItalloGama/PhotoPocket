@@ -4,6 +4,7 @@ import Register from './pages/Register'
 import Login from './pages/Login'
 import User from './pages/User'
 import ProtectedRoute from './components/ProtectedRoute'
+import Navigation from './components/Nav'
 import { CheckSession } from './services/Auth'
 import './styles/App.css'
 
@@ -35,6 +36,11 @@ function App() {
 
   return (
     <div className="App">
+      <Navigation
+        authenticated={authenticated}
+        user={user}
+        handleLogOut={handleLogOut}
+      />
       <Switch>
         <Route
           exact

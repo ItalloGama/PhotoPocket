@@ -17,7 +17,7 @@ export default function ProtectedRoute({
         user && authenticated ? (
           <Component {...props} /> // Render our chosen component if a user exists and they are authenticated
         ) : (
-          <Redirect to="/login" /> // Otherwise, use the Redirect component to return the user to the sign in screen
+          <Redirect to="/" /> // Otherwise, use the Redirect component to return the user to the sign in screen
         )
       }
     />
