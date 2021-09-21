@@ -17,13 +17,13 @@ function App() {
     setUser(session)
     toggleAuthenticated(true)
   }
-
-  // const handleLogOut = () => {
-  //   //Reset all auth related state and clear localstorage
-  //   setUser(null)
-  //   toggleAuthenticated(false)
-  //   localStorage.clear()
-  // }
+  // log out
+  const handleLogOut = () => {
+    //Reset all auth related state and clear localstorage
+    setUser(null)
+    toggleAuthenticated(false)
+    localStorage.clear()
+  }
 
   useEffect(() => {
     const token = localStorage.getItem('token')
@@ -37,7 +37,8 @@ function App() {
     <div className="App">
       <Switch>
         <Route
-          path="/login"
+          exact
+          path="/"
           component={(props) => (
             <Login
               {...props}
