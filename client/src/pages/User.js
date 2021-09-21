@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { GetPhotos, PostPhoto } from '../services/PhotoServices'
 import { Button, Form } from 'react-bootstrap'
+import PictureCard from '../components/PictureCard'
 
 const User = (props) => {
-  const [photo, setPhotos] = useState([])
+  const [photos, setPhotos] = useState([])
   const [formValues, setFormValues] = useState({ img: '', description: '' })
 
   const getUserPhotos = async () => {
@@ -52,6 +53,17 @@ const User = (props) => {
           ADD
         </Button>
       </Form>
+
+      {photos.map((photo, index) => (
+        <PictureCard
+          pictureId={photo.id}
+          userId={photo.userId}
+          img={photo.img}
+          description={photo.description}
+          key={index}
+          getUserPhotos={getUserPhotos}
+        />
+      ))}
     </div>
   )
 }
