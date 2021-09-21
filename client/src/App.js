@@ -1,22 +1,13 @@
-import logo from './logo.svg'
 import './App.css'
+import { Route, Switch } from 'react-router-dom'
 
 function App() {
+  const [authenticated, toggleAuthenticated] = useState(false)
+  const [user, setUser] = useState(null)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>APP</h1>
     </div>
   )
 }
