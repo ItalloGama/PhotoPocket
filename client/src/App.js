@@ -3,18 +3,19 @@ import { Route, Switch } from 'react-router-dom'
 import Register from './pages/Register'
 import Login from './pages/Login'
 import ProtectedRoute from './components/ProtectedRoute'
+import { CheckSession } from './services/Auth'
 import './styles/App.css'
 
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false)
   const [user, setUser] = useState(null)
 
-  // const checkToken = async () => {
-  //   //If a token exists, sends token to localstorage to persist logged in user
-  //   const session = await CheckSession()
-  //   setUser(session)
-  //   toggleAuthenticated(true)
-  // }
+  const checkToken = async () => {
+    //If a token exists, sends token to localstorage to persist logged in user
+    const session = await CheckSession()
+    setUser(session)
+    toggleAuthenticated(true)
+  }
 
   // const handleLogOut = () => {
   //   //Reset all auth related state and clear localstorage
@@ -23,13 +24,13 @@ function App() {
   //   localStorage.clear()
   // }
 
-  // useEffect(() => {
-  //   const token = localStorage.getItem('token')
-  //   // Check if token exists before requesting to validate the token
-  //   if (token) {
-  //     checkToken()
-  //   }
-  // }, [])
+  useEffect(() => {
+    const token = localStorage.getItem('token')
+    // Check if token exists before requesting to validate the token
+    if (token) {
+      checkToken()
+    }
+  }, [])
 
   return (
     <div className="App">
@@ -45,12 +46,12 @@ function App() {
           )}
         />
         <Route path="/register" component={Register} />
-        <ProtectedRoute
+        {/* <ProtectedRoute
           authenticated={authenticated}
           user={user}
           path="/feed"
           // component={Feed}
-        />
+        /> */}
       </Switch>
     </div>
   )

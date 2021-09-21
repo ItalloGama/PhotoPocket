@@ -20,7 +20,7 @@ const RegisterForm = (props) => {
           type="email"
           name="newEmail"
           placeholder="enter your email"
-          value={props.newUsername}
+          value={props.newEmail}
           onChange={props.handleChange}
         />
       </Form.Group>
@@ -28,9 +28,9 @@ const RegisterForm = (props) => {
         <Form.Label>Password:</Form.Label>
         <Form.Control
           type="password"
-          name="newEmail"
+          name="newPassword"
           placeholder="enter your password"
-          value={props.newUsername}
+          value={props.newPassword}
           onChange={props.handleChange}
         />
       </Form.Group>
