@@ -2,13 +2,13 @@ import React from 'react'
 import { Button, Form } from 'react-bootstrap'
 
 const RegisterForm = (props) => {
-    return (
-    <Form className="bootstrap-form-contain" onSubmit={props.postNewUser}>
+  return (
+    <Form className="bootstrap-form-contain" onSubmit={props.handleSubmit}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email:</Form.Label>
         <Form.Control
           type="email"
-          name="newEmail"
+          name="email"
           placeholder="example@example.com"
           value={props.newUsername}
           onChange={props.handleChange}
@@ -18,7 +18,7 @@ const RegisterForm = (props) => {
         <Form.Label>Password:</Form.Label>
         <Form.Control
           type="password"
-          name="newPassword"
+          name="password"
           placeholder="enter your password"
           value={props.newUsername}
           onChange={props.handleChange}

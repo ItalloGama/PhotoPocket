@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import Register from './pages/Register'
 import Login from './pages/Login'
+import User from './pages/User'
 import ProtectedRoute from './components/ProtectedRoute'
 import { CheckSession } from './services/Auth'
 import './styles/App.css'
@@ -46,12 +47,12 @@ function App() {
           )}
         />
         <Route path="/register" component={Register} />
-        {/* <ProtectedRoute
+        <ProtectedRoute
           authenticated={authenticated}
           user={user}
-          path="/feed"
-          // component={Feed}
-        /> */}
+          path="/user"
+          component={User}
+        />
       </Switch>
     </div>
   )
