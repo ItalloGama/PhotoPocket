@@ -1,7 +1,7 @@
 const router = require('express').Router()
 const controller = require('../controllers/CommentController')
 const middleware = require('../middleware')
-router.get('/', controller.GetComments)
+router.get('/:photo_id', controller.GetComments)
 router.post(
   '/:user_id/:photo_id',
   middleware.stripToken,

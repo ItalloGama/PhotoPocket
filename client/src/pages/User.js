@@ -19,6 +19,7 @@ const User = (props) => {
   const addPhotoToUser = (e) => {
     e.preventDefault()
     PostPhoto(props.user.id, formValues)
+    getUserPhotos()
   }
 
   useEffect(() => {
@@ -53,7 +54,6 @@ const User = (props) => {
           ADD
         </Button>
       </Form>
-
       {photos.map((photo, index) => (
         <PictureCard
           pictureId={photo.id}
