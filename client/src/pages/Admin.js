@@ -1,5 +1,5 @@
 import { React, useState } from 'react'
-import { Form, Button } from 'react-bootstrap'
+import { Form, Button, NavLink } from 'react-bootstrap'
 import { UpdateUser } from '../services/UserServices'
 
 const iState = {
@@ -19,12 +19,19 @@ const AdminForm = (props) => {
     // props.history.push('/user')
   }
 
+  const routeToUser = () => {
+    props.history.push('/user')
+  }
+
   const handleChange = (e) => {
     setAdminFormValues({ ...adminFormValues, [e.target.name]: e.target.value })
   }
 
   return (
     <div className="admin_form">
+      <NavLink to="/user" onClick={routeToUser}>
+        Back to user page
+      </NavLink>
       <Form className="bootstrap-form-contain" onSubmit={updateUserInfo}>
         <Form.Control
           type="text"
