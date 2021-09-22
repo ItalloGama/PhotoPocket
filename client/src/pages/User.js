@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { NavLink } from 'react-router-dom'
 import { GetPhotos, PostPhoto } from '../services/PhotoServices'
 import { Button, Form, Navbar, Container } from 'react-bootstrap'
 import PictureCard from '../components/PictureCard'
@@ -28,6 +29,7 @@ const User = (props) => {
 
   return (
     <div className="page">
+      <NavLink to="/admin">Admin</NavLink>
       <Navbar className="add-photo-nav" expand={false}>
         <Container fluid>
           <Navbar.Brand>Add a new photo...</Navbar.Brand>

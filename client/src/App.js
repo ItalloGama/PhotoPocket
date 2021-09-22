@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom'
 import Register from './pages/Register'
 import Login from './pages/Login'
 import User from './pages/User'
+import AdminForm from './pages/Admin'
 import ProtectedRoute from './components/ProtectedRoute'
 import Navigation from './components/Nav'
 import { CheckSession } from './services/Auth'
@@ -60,6 +61,14 @@ function App() {
           path="/user"
           component={(props) => (
             <User {...props} authenticated={authenticated} user={user} />
+          )}
+        />
+        <ProtectedRoute
+          authenticated={authenticated}
+          user={user}
+          path="/admin"
+          component={(props) => (
+            <AdminForm {...props} authenticated={authenticated} user={user} />
           )}
         />
       </Switch>
