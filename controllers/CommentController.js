@@ -2,7 +2,9 @@ const { User, PictureCard, Comment } = require('../models')
 
 const GetComments = async (req, res) => {
   try {
-    const comment = await Comment.findAll()
+    const comment = await Comment.findAll({
+      where: { pictureCardId: req.params.photo_id }
+    })
     res.send(comment)
   } catch (error) {
     throw error
