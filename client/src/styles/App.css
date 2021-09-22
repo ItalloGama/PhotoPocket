@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  width:100vw;
+}
+.page {
+  max-width: 100%;
 }
 /* NAVIGATION */
 .nav-bar {
@@ -27,6 +31,12 @@ a:hover {
   color: #d00000;
 }
 .photoCard {
-  width: 50px;
-  height: 50px
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+.card {
+  margin: 5px;
+  width: 200px;
+  height: 250px
 }
