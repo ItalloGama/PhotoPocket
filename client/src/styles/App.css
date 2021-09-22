@@ -26,7 +26,7 @@ color: white;
   display: flex;
   align-items: center;
   /* align-self: flex-start; */
-  background-color: #03071e;
+  background: conic-gradient(from 261.19deg at 59.46% 46.15%, rgba(98, 57, 217, 0.89) -52.5deg, rgba(129, 28, 207, 0.57) 232.5deg, rgba(115, 95, 233, 0.894551) 270deg, rgba(98, 57, 217, 0.89) 307.5deg, rgba(129, 28, 207, 0.57) 592.5deg);
   border-bottom: 5px groove #370617;
   margin-bottom: 20px;
   width: 100vw;
