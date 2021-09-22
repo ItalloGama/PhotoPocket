@@ -6,6 +6,7 @@ const CommentCard = (props) => {
   const deleteComment = async () => {
     await DeleteComment(props.commentId)
     props.getPhotoComments()
+    props.showModal()
   }
 
   return (

@@ -22,7 +22,7 @@ const PictureModal = (props) => {
     PostComment(props.userId, props.pictureId, formValues)
   }
 
-  useEffect(() => {}, [props.comments])
+  // useEffect(() => {}, [props.comments])
 
   return (
     <Modal
@@ -46,6 +46,7 @@ const PictureModal = (props) => {
             comment={comment.comment}
             name={comment.User.name}
             getPhotoComments={props.getPhotoComments}
+            showModal={props.showModal}
           />
         ))}
       </Modal.Body>
