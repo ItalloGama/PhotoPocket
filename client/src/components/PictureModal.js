@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { Modal, Button, Card } from 'react-bootstrap'
+import { Modal, Button, Card, Form } from 'react-bootstrap'
 import { DeletePhoto } from '../services/PhotoServices'
+import { PostComment } from '../services/CommentServices'
 
 const PictureModal = (props) => {
   const [formValues, setFormValues] = useState('')
@@ -15,10 +16,10 @@ const PictureModal = (props) => {
     setFormValues(e.target.value)
   }
 
-  // const addCommentToPhoto = (e) => {
-  //   e.preventDefault()
-  //   PostComment(props.user.id, formValues)
-  // }
+  const addCommentToPhoto = (e) => {
+    e.preventDefault()
+    PostComment(props.userId, props.pictureId, formValues)
+  }
 
   return (
     <Modal
@@ -35,8 +36,32 @@ const PictureModal = (props) => {
           <Card.Img src={props.img} alt={props.description} fluid />
         </Card>
       </Modal.Body>
+      {/* <Modal.Body>
+        {
+          props.comments.map((comment, index) => (
+
+          ))
+        }
+      </Modal.Body> */}
       <Modal.Body>
-        <Card></Card>
+        <Form className="bootstrap-form-contain" onSubmit={addCommentToPhoto}>
+          <Form.Control
+            type="text"
+            name="comment"
+            as="textarea"
+            placeholder="Leave a comment here"
+            style={{ height: '150px' }}
+            value={formValues}
+            onChange={handleChange}
+          />
+          <Button
+            variant="primary"
+            type="submit"
+            className="add-comment-button"
+          >
+            COMMENT
+          </Button>
+        </Form>
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={deletePhoto}>DELETE</Button>
