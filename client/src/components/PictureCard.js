@@ -23,7 +23,7 @@ function PictureCard(props) {
   }
 
   return (
-    <div>
+    <div className='card'>
       <Card className="bg-dark text-white" onClick={showModal}>
         <Card.Img src={props.img} alt={props.description} />
       </Card>

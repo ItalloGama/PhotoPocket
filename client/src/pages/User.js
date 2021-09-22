@@ -27,7 +27,7 @@ const User = (props) => {
   }, [])
 
   return (
-    <div>
+    <div className='page'>
       <h1>User Page</h1>
       <Form className="bootstrap-form-contain" onSubmit={addPhotoToUser}>
         <Form.Group className="mb-3" controlId="formBasicImage">
@@ -54,6 +54,7 @@ const User = (props) => {
           ADD
         </Button>
       </Form>
+      <div className='photoCard'> 
       {photos.map((photo, index) => (
         <PictureCard
           pictureId={photo.id}
@@ -64,6 +65,7 @@ const User = (props) => {
           getUserPhotos={getUserPhotos}
         />
       ))}
+      </div>
     </div>
   )
 }
