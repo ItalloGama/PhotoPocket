@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  width:100vw;
+  width: 100vw;
 }
 .page {
   max-width: 100%;
@@ -30,6 +30,18 @@ a:visited {
 a:hover {
   color: #d00000;
 }
+/* ADD PHOTO */
+.add-photo-nav {
+  display: flex;
+  width: 25rem;
+  background-color: #939edc;
+  border: 1px groove #939edc;
+  border-radius: 5px;
+  align-self: center;
+  margin: 10px;
+}
+
+/* PHOTOS */
 .photoCard {
   display: flex;
   flex-wrap: wrap;
@@ -38,5 +50,17 @@ a:hover {
 .card {
   margin: 5px;
   width: 200px;
-  height: 250px
+  height: 250px;
+}
+
+/* COMMENTS */
+.comment-card {
+  display: flex;
+  width: 50vw;
+}
+.comment-card > .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50vw;
 }

@@ -23,7 +23,7 @@ function PictureCard(props) {
   }
 
   return (
-    <div className='card'>
+    <div className="card">
       <Card className="bg-dark text-white" onClick={showModal}>
         <Card.Img src={props.img} alt={props.description} />
       </Card>
@@ -36,6 +36,7 @@ function PictureCard(props) {
         description={props.description}
         show={modalShow}
         onHide={hideModal}
+        showModal={showModal}
         getUserPhotos={props.getUserPhotos}
       />
     </div>
