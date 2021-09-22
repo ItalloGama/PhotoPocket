@@ -19,3 +19,11 @@ export const PostComment = async (user_id, photo_id, data) => {
     throw error
   }
 }
+
+export const DeleteComment = async (comment_id) => {
+  try {
+    await Client.delete(`/comment/${comment_id}`)
+  } catch (error) {
+    throw error
+  }
+}

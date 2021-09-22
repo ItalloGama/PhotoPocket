@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Modal, Button, Card, Form } from 'react-bootstrap'
 import { DeletePhoto } from '../services/PhotoServices'
 import { PostComment } from '../services/CommentServices'
+import CommentCard from './CommentCard'
 
 const PictureModal = (props) => {
   const [formValues, setFormValues] = useState('')
@@ -21,6 +22,8 @@ const PictureModal = (props) => {
     PostComment(props.userId, props.pictureId, formValues)
   }
 
+  useEffect(() => {}, [props.comments])
+
   return (
     <Modal
       {...props}
@@ -36,13 +39,16 @@ const PictureModal = (props) => {
           <Card.Img src={props.img} alt={props.description} fluid />
         </Card>
       </Modal.Body>
-      {/* <Modal.Body>
-        {
-          props.comments.map((comment, index) => (
-
-          ))
-        }
-      </Modal.Body> */}
+      <Modal.Body>
+        {props.comments.map((comment, index) => (
+          <CommentCard
+            commentId={comment.id}
+            comment={comment.comment}
+            name={comment.User.name}
+            getPhotoComments={props.getPhotoComments}
+          />
+        ))}
+      </Modal.Body>
       <Modal.Body>
         <Form className="bootstrap-form-contain" onSubmit={addCommentToPhoto}>
           <Form.Control
