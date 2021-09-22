@@ -4,7 +4,7 @@ import { Button, Form } from 'react-bootstrap'
 const RegisterForm = (props) => {
   return (
     <Form className="bootstrap-form-contain" onSubmit={props.postNewUser}>
-      <Form.Group className="mb-3" controlId="formBasicName">
+      <Form.Group className="name-container" controlId="formBasicName">
         <Form.Label>Name:</Form.Label>
         <Form.Control
           type="name"
@@ -14,7 +14,7 @@ const RegisterForm = (props) => {
           onChange={props.handleChange}
         />
       </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
+      <Form.Group className="email-container" controlId="formBasicEmail">
         <Form.Label>Email:</Form.Label>
         <Form.Control
           type="email"
@@ -24,7 +24,7 @@ const RegisterForm = (props) => {
           onChange={props.handleChange}
         />
       </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicPassword">
+      <Form.Group className="password-container" controlId="formBasicPassword">
         <Form.Label>Password:</Form.Label>
         <Form.Control
           type="password"
