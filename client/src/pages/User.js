@@ -53,7 +53,6 @@ const User = (props) => {
           ADD
         </Button>
       </Form>
-
       {photos.map((photo, index) => (
         <PictureCard
           pictureId={photo.id}
