@@ -55,14 +55,16 @@ function App() {
           )}
         />
         <Route path="/register" component={Register} />
-        <ProtectedRoute
-          authenticated={authenticated}
-          user={user}
-          path="/user"
-          component={(props) => (
-            <User {...props} authenticated={authenticated} user={user} />
-          )}
-        />
+        {user && authenticated && (
+          <ProtectedRoute
+            authenticated={authenticated}
+            user={user}
+            path="/user"
+            component={(props) => (
+              <User {...props} authenticated={authenticated} user={user} />
+            )}
+          />
+        )}
         <ProtectedRoute
           authenticated={authenticated}
           user={user}

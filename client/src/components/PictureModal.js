@@ -22,8 +22,6 @@ const PictureModal = (props) => {
     PostComment(props.userId, props.pictureId, formValues)
   }
 
-  // useEffect(() => {}, [props.comments])
-
   return (
     <Modal
       {...props}
@@ -36,7 +34,7 @@ const PictureModal = (props) => {
       </Modal.Header>
       <Modal.Body>
         <Card className="bg-dark text-white">
-          <Card.Img src={props.img} alt={props.description} fluid />
+          <Card.Img src={props.img} alt={props.description} />
         </Card>
       </Modal.Body>
       <Modal.Body>
