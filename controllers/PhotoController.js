@@ -3,7 +3,9 @@ const AWSservice = require('../middleware/AWSservice')
 
 const GetPhotos = async (req, res) => {
   try {
-    const photo = await PictureCard.findAll()
+    const photo = await PictureCard.findAll({
+      where: { userId: req.params.user_id }
+    })
     res.send(photo)
   } catch (error) {
     throw error
