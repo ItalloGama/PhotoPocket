@@ -6,7 +6,8 @@ import PictureCard from '../components/PictureCard'
 
 const User = (props) => {
   const [photos, setPhotos] = useState([])
-  const [formValues, setFormValues] = useState({ img: '', description: '' })
+  const [formValues, setFormValues] = useState({ description: '' })
+  const [imageFile, setImageFile] = useState('')
 
   const getUserPhotos = async () => {
     const data = await GetPhotos()
@@ -17,9 +18,19 @@ const User = (props) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value })
   }
 
+  const handleFileChange = (e) => {
+    // setImageFile(e.target.value)
+    setImageFile(e.target.files[0])
+  }
+
   const addPhotoToUser = (e) => {
     e.preventDefault()
-    PostPhoto(props.user.id, formValues)
+    const formData = new FormData()
+    formData.append('image', imageFile)
+    for (let key in formValues) {
+      formData.append(key, formValues[key])
+    }
+    PostPhoto(props.user.id, formData)
     getUserPhotos()
   }
 
@@ -53,7 +64,11 @@ const User = (props) => {
                 {formValues.img ? (
                   <Form.Control type="file" disabled />
                 ) : (
-                  <Form.Control type="file" />
+                  <Form.Control
+                    type="file"
+                    // value={imageFile}
+                    onChange={handleFileChange}
+                  />
                 )}
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicDescription">
