@@ -11,6 +11,7 @@ width: 100vw;
 display:flex;
 justify-content: center;
 color: white;
+
 }
 .submit-button {
   margin-top: 10px;
@@ -82,4 +83,3 @@ a:hover {
   align-items: center;
   width: 50vw;
 }
-

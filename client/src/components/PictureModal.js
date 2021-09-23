@@ -17,12 +17,12 @@ const PictureModal = (props) => {
     setFormValues(e.target.value)
   }
 
-  const addCommentToPhoto = (e) => {
+  const addCommentToPhoto = async (e) => {
     e.preventDefault()
-    PostComment(props.userId, props.pictureId, formValues)
+    await PostComment(props.publicUserId, props.pictureId, formValues)
+    props.getPhotoComments()
+    setFormValues('')
   }
-
-  // useEffect(() => {}, [props.comments])
 
   return (
     <Modal
@@ -36,7 +36,7 @@ const PictureModal = (props) => {
       </Modal.Header>
       <Modal.Body>
         <Card className="bg-dark text-white">
-          <Card.Img src={props.img} alt={props.description} fluid />
+          <Card.Img src={props.img} alt={props.description} />
         </Card>
       </Modal.Body>
       <Modal.Body>
@@ -71,7 +71,9 @@ const PictureModal = (props) => {
         </Form>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={deletePhoto}>DELETE</Button>
+        {props.publicUserId === props.userId ? (
+          <Button onClick={deletePhoto}>DELETE</Button>
+        ) : undefined}
       </Modal.Footer>
     </Modal>
   )

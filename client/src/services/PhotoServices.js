@@ -1,8 +1,8 @@
 import Client from './api'
 
-export const GetPhotos = async () => {
+export const GetPhotos = async (user_id) => {
   try {
-    const res = await Client.get('/photo')
+    const res = await Client.get(`/photo/${user_id}`)
     return res.data
   } catch (error) {
     throw error

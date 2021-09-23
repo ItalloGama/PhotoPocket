@@ -6,11 +6,14 @@ import PictureCard from '../components/PictureCard'
 
 const User = (props) => {
   const [photos, setPhotos] = useState([])
-  const [formValues, setFormValues] = useState({ description: '' })
+  const [formValues, setFormValues] = useState({
+    imageUrl: '',
+    description: ''
+  })
   const [imageFile, setImageFile] = useState('')
 
-  const getUserPhotos = async () => {
-    const data = await GetPhotos()
+  const getUserPhotos = async (id) => {
+    const data = await GetPhotos(id)
     setPhotos(data)
   }
 
@@ -23,19 +26,19 @@ const User = (props) => {
     setImageFile(e.target.files[0])
   }
 
-  const addPhotoToUser = (e) => {
+  const addPhotoToUser = async (e) => {
     e.preventDefault()
     const formData = new FormData()
     formData.append('image', imageFile)
     for (let key in formValues) {
       formData.append(key, formValues[key])
     }
-    PostPhoto(props.user.id, formData)
-    getUserPhotos()
+    await PostPhoto(props.user.id, formData)
+    getUserPhotos(props.user.id)
   }
 
   useEffect(() => {
-    getUserPhotos()
+    getUserPhotos(props.user.id)
   }, [])
 
   return (
@@ -52,16 +55,20 @@ const User = (props) => {
             >
               <Form.Group className="mb-3" controlId="formBasicImage">
                 <Form.Label>Add Photo:</Form.Label>
-                <Form.Control
-                  type="text"
-                  name="img"
-                  placeholder="enter photo url"
-                  value={formValues.img}
-                  onChange={handleChange}
-                />
+                {imageFile ? (
+                  <Form.Control type="text" disabled />
+                ) : (
+                  <Form.Control
+                    type="text"
+                    name="imageUrl"
+                    placeholder="enter photo url"
+                    value={formValues.imageUrl}
+                    onChange={handleChange}
+                  />
+                )}
               </Form.Group>
               <Form.Group className="mb-3">
-                {formValues.img ? (
+                {formValues.imageUrl ? (
                   <Form.Control type="file" disabled />
                 ) : (
                   <Form.Control
@@ -95,6 +102,7 @@ const User = (props) => {
       <div className="photoCard">
         {photos.map((photo, index) => (
           <PictureCard
+            publicUserId={props.user.id}
             pictureId={photo.id}
             userId={photo.userId}
             img={photo.img}

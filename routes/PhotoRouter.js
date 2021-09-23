@@ -7,7 +7,7 @@ const upload = multer({
   storage: storage
 })
 
-router.get('/', controller.GetPhotos)
+router.get('/:user_id', controller.GetPhotos)
 router.post(
   '/:user_id',
   middleware.stripToken,
