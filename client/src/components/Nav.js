@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { Navbar, Nav, Container } from 'react-bootstrap'
+import logo from '../screenshot/logo.png'
 
 export default function Navigation({ authenticated, user, handleLogOut }) {
   let authenticatedOptions
@@ -16,13 +17,7 @@ export default function Navigation({ authenticated, user, handleLogOut }) {
     <Navbar variant="dark" className="nav-bar">
       <Container>
         <Navbar.Brand href="/">
-          <img
-            src="../screenshot/logo.png"
-            width="30"
-            height="30"
-            margin-right="30"
-            alt=""
-          />
+          <img src={logo} margin-right="30" alt="" />
         </Navbar.Brand>
         <Nav className="me-auto">
           {authenticated && user ? authenticatedOptions : publicOptions}
