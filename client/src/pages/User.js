@@ -23,14 +23,14 @@ const User = (props) => {
     setImageFile(e.target.files[0])
   }
 
-  const addPhotoToUser = (e) => {
+  const addPhotoToUser = async (e) => {
     e.preventDefault()
     const formData = new FormData()
     formData.append('image', imageFile)
     for (let key in formValues) {
       formData.append(key, formValues[key])
     }
-    PostPhoto(props.user.id, formData)
+    await PostPhoto(props.user.id, formData)
     getUserPhotos()
   }
 
