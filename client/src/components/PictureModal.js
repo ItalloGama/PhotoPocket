@@ -71,7 +71,9 @@ const PictureModal = (props) => {
         </Form>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={deletePhoto}>DELETE</Button>
+        {props.publicUserId === props.userId ? (
+          <Button onClick={deletePhoto}>DELETE</Button>
+        ) : undefined}
       </Modal.Footer>
     </Modal>
   )

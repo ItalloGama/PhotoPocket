@@ -34,7 +34,7 @@ const User = (props) => {
       formData.append(key, formValues[key])
     }
     await PostPhoto(props.user.id, formData)
-    getUserPhotos()
+    getUserPhotos(props.user.id)
   }
 
   useEffect(() => {
