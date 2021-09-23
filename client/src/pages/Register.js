@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { RegisterUser } from '../services/Auth'
 import RegisterForm from '../components/RegisterForm'
+import logo from '../screenshot/logo2.png'
 
 const iState = {
   newName: '',
@@ -28,6 +29,7 @@ const Register = (props) => {
 
   return (
     <div className="page">
+      <img src={logo} className="register-logo" />
       <RegisterForm
         newName={formValues.newName}
         newEmail={formValues.newEmail}
