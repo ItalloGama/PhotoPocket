@@ -21,13 +21,14 @@ function PictureCard(props) {
     setModalShow(false)
     setComments([])
   }
-
+  // console.log(props)
   return (
     <div className="card">
       <Card className="bg-dark text-white" onClick={showModal}>
         <Card.Img src={props.img} alt={props.description} />
       </Card>
       <PictureModal
+        publicUserId={props.publicUserId}
         pictureId={props.pictureId}
         userId={props.userId}
         img={props.img}

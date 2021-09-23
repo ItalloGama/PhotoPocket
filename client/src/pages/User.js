@@ -102,6 +102,7 @@ const User = (props) => {
       <div className="photoCard">
         {photos.map((photo, index) => (
           <PictureCard
+            publicUserId={props.user.id}
             pictureId={photo.id}
             userId={photo.userId}
             img={photo.img}
