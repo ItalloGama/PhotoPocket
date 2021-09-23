@@ -76,7 +76,14 @@ function App() {
             )}
           />
         )}
-        <Route path="/public/:user_id" component={Public} />
+        {user && authenticated && (
+          <Route
+            path="/public/:user_id"
+            component={(props) => (
+              <Public {...props} authenticated={authenticated} user={user} />
+            )}
+          />
+        )}
       </Switch>
     </div>
   )

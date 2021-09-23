@@ -19,7 +19,7 @@ const PictureModal = (props) => {
 
   const addCommentToPhoto = async (e) => {
     e.preventDefault()
-    await PostComment(props.userId, props.pictureId, formValues)
+    await PostComment(props.publicUserId, props.pictureId, formValues)
     props.getPhotoComments()
     setFormValues('')
   }
