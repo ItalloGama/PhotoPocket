@@ -6,7 +6,10 @@ import PictureCard from '../components/PictureCard'
 
 const User = (props) => {
   const [photos, setPhotos] = useState([])
-  const [formValues, setFormValues] = useState({ description: '' })
+  const [formValues, setFormValues] = useState({
+    imageUrl: '',
+    description: ''
+  })
   const [imageFile, setImageFile] = useState('')
 
   const getUserPhotos = async () => {
@@ -54,14 +57,14 @@ const User = (props) => {
                 <Form.Label>Add Photo:</Form.Label>
                 <Form.Control
                   type="text"
-                  name="img"
+                  name="imageUrl"
                   placeholder="enter photo url"
-                  value={formValues.img}
+                  value={formValues.imageUrl}
                   onChange={handleChange}
                 />
               </Form.Group>
               <Form.Group className="mb-3">
-                {formValues.img ? (
+                {formValues.imageUrl ? (
                   <Form.Control type="file" disabled />
                 ) : (
                   <Form.Control
