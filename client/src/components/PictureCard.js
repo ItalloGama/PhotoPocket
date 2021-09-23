@@ -21,7 +21,7 @@ function PictureCard(props) {
     setModalShow(false)
     setComments([])
   }
-  // console.log(props)
+
   return (
     <div className="card">
       <Card className="bg-dark text-white" onClick={showModal}>
