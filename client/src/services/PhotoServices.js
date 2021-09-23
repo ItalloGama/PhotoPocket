@@ -1,4 +1,3 @@
-
 import Client from './api'
 
 export const GetPhotos = async () => {
@@ -12,10 +11,7 @@ export const GetPhotos = async () => {
 
 export const PostPhoto = async (user_id, data) => {
   try {
-    const res = await Client.post(`/photo/${user_id}`, {
-      img: data.img,
-      description: data.description
-    })
+    const res = await Client.post(`/photo/${user_id}`, data)
     return res.data
   } catch (error) {
     throw error

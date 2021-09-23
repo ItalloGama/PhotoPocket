@@ -1,4 +1,5 @@
 const { PictureCard } = require('../models')
+const AWSservice = require('../middleware/AWSservice')
 
 const GetPhotos = async (req, res) => {
   try {
@@ -11,8 +12,20 @@ const GetPhotos = async (req, res) => {
 
 const CreatePhoto = async (req, res) => {
   try {
-    let user_id = req.params.user_id
-    const photo = await PictureCard.create({ userId: user_id, ...req.body })
+    let { user_id } = req.params
+    let { description } = req.body
+    let img = req.file
+    let image = {
+      Body: img.buffer,
+      Key: `${user_id}/${img.originalname}`,
+      ContentType: img.mimetype
+    }
+    let location = await AWSservice.upload(image)
+    const photo = await PictureCard.create({
+      userId: user_id,
+      img: location,
+      description: description
+    })
     res.send(photo)
   } catch (error) {
     throw error

@@ -1,5 +1,6 @@
 const express = require('express')
 const cors = require('cors')
+const AWSservice = require('./middleware/AWSservice')
 const logger = require('morgan')
 const bodyParser = require('body-parser')
 const AuthRouter = require('./routes/AuthRouter')
@@ -19,4 +20,11 @@ app.use('/photo', PhotoRouter)
 app.use('/comment', CommentRouter)
 app.use('/user', UserRouter)
 
-app.listen(PORT, () => console.log(`Server Running On Port: ${PORT}`))
+app.listen(PORT, async () => {
+  try {
+    AWSservice.init()
+    console.log(`Server Running On Port: ${PORT}`)
+  } catch (error) {
+    throw new Error('Connection error')
+  }
+})
