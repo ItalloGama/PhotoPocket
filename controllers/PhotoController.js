@@ -13,20 +13,28 @@ const GetPhotos = async (req, res) => {
 const CreatePhoto = async (req, res) => {
   try {
     let { user_id } = req.params
-    let { description } = req.body
+    let { description, imageUrl } = req.body
     let img = req.file
-    let image = {
-      Body: img.buffer,
-      Key: `${user_id}/${img.originalname}`,
-      ContentType: img.mimetype
+    if (img) {
+      let image = {
+        Body: img.buffer,
+        Key: `${user_id}/${img.originalname}`,
+        ContentType: img.mimetype
+      }
+      let location = await AWSservice.upload(image)
+      const photo = await PictureCard.create({
+        userId: user_id,
+        img: location,
+        description: description
+      })
+      res.send(photo)
+    } else if (imageUrl) {
+      const photo = await PictureCard.create({
+        img: imageUrl,
+        description: description
+      })
+      res.send(photo)
     }
-    let location = await AWSservice.upload(image)
-    const photo = await PictureCard.create({
-      userId: user_id,
-      img: location,
-      description: description
-    })
-    res.send(photo)
   } catch (error) {
     throw error
   }
