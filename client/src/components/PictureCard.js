@@ -23,7 +23,7 @@ function PictureCard(props) {
   }
   // console.log(props)
   return (
-    <div className="card">
+    <div>
       <Card className="bg-dark text-white" onClick={showModal}>
         <Card.Img src={props.img} alt={props.description} />
       </Card>
