@@ -12,8 +12,8 @@ const User = (props) => {
   })
   const [imageFile, setImageFile] = useState('')
 
-  const getUserPhotos = async () => {
-    const data = await GetPhotos()
+  const getUserPhotos = async (id) => {
+    const data = await GetPhotos(id)
     setPhotos(data)
   }
 
@@ -38,7 +38,7 @@ const User = (props) => {
   }
 
   useEffect(() => {
-    getUserPhotos()
+    getUserPhotos(props.user.id)
   }, [])
 
   return (

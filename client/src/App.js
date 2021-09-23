@@ -4,6 +4,7 @@ import Register from './pages/Register'
 import Login from './pages/Login'
 import User from './pages/User'
 import AdminForm from './pages/Admin'
+import Public from './pages/Public'
 import ProtectedRoute from './components/ProtectedRoute'
 import Navigation from './components/Nav'
 import { CheckSession } from './services/Auth'
@@ -65,14 +66,17 @@ function App() {
             )}
           />
         )}
-        <ProtectedRoute
-          authenticated={authenticated}
-          user={user}
-          path="/admin"
-          component={(props) => (
-            <AdminForm {...props} authenticated={authenticated} user={user} />
-          )}
-        />
+        {user && authenticated && (
+          <ProtectedRoute
+            authenticated={authenticated}
+            user={user}
+            path="/admin"
+            component={(props) => (
+              <AdminForm {...props} authenticated={authenticated} user={user} />
+            )}
+          />
+        )}
+        <Route path="/public/:user_id" component={Public} />
       </Switch>
     </div>
   )
