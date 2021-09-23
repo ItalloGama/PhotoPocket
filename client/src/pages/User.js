@@ -55,13 +55,17 @@ const User = (props) => {
             >
               <Form.Group className="mb-3" controlId="formBasicImage">
                 <Form.Label>Add Photo:</Form.Label>
-                <Form.Control
-                  type="text"
-                  name="imageUrl"
-                  placeholder="enter photo url"
-                  value={formValues.imageUrl}
-                  onChange={handleChange}
-                />
+                {imageFile ? (
+                  <Form.Control type="text" disabled />
+                ) : (
+                  <Form.Control
+                    type="text"
+                    name="imageUrl"
+                    placeholder="enter photo url"
+                    value={formValues.imageUrl}
+                    onChange={handleChange}
+                  />
+                )}
               </Form.Group>
               <Form.Group className="mb-3">
                 {formValues.imageUrl ? (
