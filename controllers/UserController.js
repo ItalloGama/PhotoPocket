@@ -5,7 +5,7 @@ const UpdateUser = async (req, res) => {
   let newData = {}
   for (let key in data) {
     if (data[key]) {
-      newData = { ...newData, key: data[key] }
+      newData = { ...newData, [key]: data[key] }
     }
   }
   try {
