@@ -26,7 +26,7 @@ The project is deployed on Heroku and can be viewed [here](https://arcane-tor-98
 - React
 - Node
 - Heroku
-- AWS
+- AWS S3
 
 > # _Details_
 >
@@ -36,15 +36,15 @@ The project is deployed on Heroku and can be viewed [here](https://arcane-tor-98
 
 Users will be able to register, login and navigate from their user profile. Users will be able to post comments under the photos posted in their profile to give more details to viewers.
 
-### Development Process
 
 > ## _Screenshots_
 >
-> ![Screenshots]()
+> 
+![Screenshots](client/src/screenshot/home.png)
 
-![Screenshots]()
+![Screenshots](client/src/screenshot/register.png)
 
-![Screenshots]()
+![Screenshots](client/src/screenshot/user.png)
 
 > ## _Credits_
 

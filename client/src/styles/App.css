@@ -71,7 +71,6 @@ margin-top: 50px;
   border-color: rgb(192, 173, 211);
 }
   
-
 .submit-button:hover, .add-comment-button:hover, .delete-button-modal:hover  {
   background: rgb(209, 182, 235);
   border-color: rgb(192, 173, 211)

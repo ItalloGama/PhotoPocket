@@ -13,7 +13,9 @@ const CommentCard = (props) => {
     <Card className="mb-2 comment-card" fluid className="comment-card">
       <Card.Header>
         {props.name}
-        <Button onClick={deleteComment}>X</Button>
+        <Button onClick={deleteComment} className="modal-button-del">
+          X
+        </Button>
       </Card.Header>
       <Card.Body>
         <Card.Text>{props.comment}</Card.Text>
