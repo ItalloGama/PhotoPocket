@@ -59,6 +59,7 @@ const User = (props) => {
                     <Form.Control type="text" disabled />
                   ) : (
                     <Form.Control
+                      className="photo-field"
                       type="text"
                       name="imageUrl"
                       placeholder="enter photo url"
@@ -72,6 +73,7 @@ const User = (props) => {
                     <Form.Control type="file" disabled />
                   ) : (
                     <Form.Control
+                      className="photo-field"
                       type="file"
                       // value={imageFile}
                       onChange={handleFileChange}
@@ -79,8 +81,9 @@ const User = (props) => {
                   )}
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicDescription">
-                  <Form.Label>Add Description:</Form.Label>
+                  <Form.Label className="des-name">Add Description:</Form.Label>
                   <Form.Control
+                    className="photo-field"
                     type="name"
                     name="description"
                     placeholder="enter description"
@@ -99,8 +102,12 @@ const User = (props) => {
             </Navbar.Collapse>
           </Container>
         </Navbar>
-        <NavLink to={`/public/${props.user.id}`}>Public Page</NavLink>
-        <NavLink to="/admin" className="admin-font">Admin</NavLink>
+        <NavLink to={`/public/${props.user.id}`} className="public-page-font">
+          Public Page
+        </NavLink>
+        <NavLink to="/admin" className="admin-font">
+          Admin
+        </NavLink>
       </div>
 
       <div className="photoCard">
