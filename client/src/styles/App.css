@@ -16,7 +16,7 @@ body {
   background-blend-mode: soft-light;
 }
 
-.field-decoration{
+.field-decoration, .photo-field {
   margin-top: 10px;
   background: rgba(200, 199, 196, 0.38);
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -24,19 +24,15 @@ body {
   border-color: rgb(192, 173, 211);
 }
 
-.back-user, .admin-font {
-  color:white;
-  text-decoration: underline;
-}
 
 .register-logo {
   width: 300px;
   height: 90px;
   margin-bottom: 60px;
+
 }
 
 .page {
-
 /* margin-top: 40px; */
 height: 100vh;
 width: 100vw;
@@ -54,13 +50,32 @@ margin-top: 50px;
   border-radius: 50px;
   border-color: rgb(192, 173, 211);
 }
+.add-photo-button:hover {  
+  background: rgb(209, 182, 235);
+  border-color: rgb(192, 173, 211)
+}
 .submit-button {
   margin-top: 10px;
-  background: rgba(200, 199, 196, 0.38);
+  background: rgba(200, 199, 196, 0.38); 
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 50px;
   border-color: rgb(192, 173, 211);
 }
+  @keyframes submit-button {
+    0% {
+      transform:scale(0.95);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    }
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+    100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+  }
+
 .submit-button:hover {
   background: rgb(209, 182, 235);
   border-color: rgb(192, 173, 211)
@@ -133,7 +148,7 @@ a:hover {
 .user-options {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: top;
   padding: 0 50px;
   width: 100vw;
 }
@@ -164,4 +179,103 @@ a:hover {
   margin: 0;
   color: rgba(241, 240, 234, 0.38);
   width: 100%;
+}
+
+.back-user{
+  color:white;
+  text-decoration: underline;
+  font-size: 16px;
+}
+
+/* Animations */
+.register-name { color:white; }
+.register-name:after, .register-name:before {
+  content:"";
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 50;
+  width: 5%;
+  height: 2px;
+  background-color: white;
+  transition: all 0.3s ease;
+  transform: scale(0.85);
+}
+.register-name:hover:before {
+  top: 0;
+  transform: scale(1);
+}
+
+.register-name:hover:after {
+  top: 0;
+  transform: scale(1);
+}
+
+.admin-font { color:white; }
+.admin-font:after, .admin-font:before {
+  content:"";
+  display: block;
+  position: absolute;
+  top: 18%;
+  left: 90.5%;
+  width: 5%;
+  height: 2px;
+  background-color: white;
+  transition: all 0.3s ease;
+  transform: scale(0.85);
+}
+.admin-font:hover:before {
+  top: 0;
+  transform: scale(1);
+}
+
+.admin-font:hover:after {
+  top: 0;
+  transform: scale(1);
+}
+
+.public-page-font { color:white; }
+.public-page-font:after, .public-page-font:before {
+  content:"";
+  display: block;
+  position: absolute;
+  top: 18%;
+  left: 60.5%;
+  width: 5%;
+  height: 2px;
+  background-color: white;
+  transition: all 0.3s ease;
+  transform: scale(0.85);
+}
+.public-page-font:hover:before {
+  top: 0;
+  transform: scale(1);
+}
+
+.public-page-font:hover:after {
+  top: 0;
+  transform: scale(1);
+}
+
+.sign-out { color:white; }
+.sign-out:after, .sign-out:before {
+  content:"";
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 50;
+  width: 5%;
+  height: 2px;
+  background-color: white;
+  transition: all 0.3s ease;
+  transform: scale(0.85);
+}
+.sign-out:hover:before {
+  top: 0;
+  transform: scale(1);
+}
+
+.sign-out:hover:after {
+  top: 0;
+  transform: scale(1);
 }
