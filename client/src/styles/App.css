@@ -173,97 +173,12 @@ a:hover {
   font-size: 16px;
 }
 
-/* NAV ANIME */
-.register-name { color:white; }
-.register-name:after, .register-name:before {
-  content:"";
-  display: block;
-  position: absolute;
-  top: 100%;
-  left: 50;
-  width: 5%;
-  height: 2px;
-  background-color: white;
-  transition: all 0.3s ease;
-  transform: scale(0.85);
-}
-.register-name:hover:before {
-  top: 0;
-  transform: scale(1);
-}
 
-.register-name:hover:after {
-  top: 0;
-  transform: scale(1);
-}
+.admin-font:hover, .register-name:hover, .public-page-font:hover, .sign-out:hover, .nav-user-options:hover {color:rgb(192, 173, 211)}
 
-.admin-font { color:white; }
-.admin-font:after, .admin-font:before {
-  content:"";
-  display: block;
-  position: absolute;
-  top: 100%;
-  left: 29.3%;
-  width: 5%;
-  height: 2px;
-  background-color: white;
-  transition: all 0.3s ease;
-  transform: scale(0.85);
-}
-.admin-font:hover:before {
-  top: 0;
-  transform: scale(1);
-}
 
-.admin-font:hover:after {
-  top: 0;
-  transform: scale(1);
-}
 
-.public-page-font { color:white; }
-.public-page-font:after, .public-page-font:before {
-  content:"";
-  display: block;
-  position: absolute;
-  top: 100%;
-  left: 20.5%;
-  width: 5%;
-  height: 2px;
-  background-color: white;
-  transition: all 0.3s ease;
-  transform: scale(0.85);
-}
-.public-page-font:hover:before {
-  top: 0;
-  transform: scale(1);
-  color:white
-}
 
-.public-page-font:hover:after {
-  top: 0;
-  transform: scale(1);
-  color:white
-}
 
-.sign-out { color:white; }
-.sign-out:after, .sign-out:before {
-  content:"";
-  display: block;
-  position: absolute;
-  top: 100%;
-  left: 36.5%;
-  width: 5%;
-  height: 2px;
-  background-color: white;
-  transition: all 0.3s ease;
-  transform: scale(0.85);
-}
-.sign-out:hover:before {
-  top: 0;
-  transform: scale(1);
-}
 
-.sign-out:hover:after {
-  top: 0;
-  transform: scale(1);
-}
+
