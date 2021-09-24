@@ -51,7 +51,7 @@ const PictureModal = (props) => {
       <Modal.Body>
         <Form className="bootstrap-form-contain" onSubmit={addCommentToPhoto}>
           <Form.Control
-            className="field-decoration"
+            className="field-decoration-modal"
             type="text"
             name="comment"
             as="textarea"
