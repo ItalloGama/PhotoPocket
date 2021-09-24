@@ -61,7 +61,7 @@ margin-top: 50px;
   border-radius: 50px;
   border-color: rgb(192, 173, 211);
 }
-  @keyframes submit-button {
+  @keyframes submitEffects {
     0% {
       transform:scale(0.95);
       box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
