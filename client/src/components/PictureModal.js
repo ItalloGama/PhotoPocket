@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Modal, Button, Card, Form } from 'react-bootstrap'
+import { Modal, Button, Card, Form, Image } from 'react-bootstrap'
 import { DeletePhoto } from '../services/PhotoServices'
 import { PostComment } from '../services/CommentServices'
 import CommentCard from './CommentCard'
@@ -35,9 +35,7 @@ const PictureModal = (props) => {
         <p>{props.description}</p>
       </Modal.Header>
       <Modal.Body>
-        <Card className="bg-dark text-white">
-          <Card.Img src={props.img} alt={props.description} />
-        </Card>
+        <Image src={props.img} alt={props.description} fluid />
       </Modal.Body>
       <Modal.Body>
         {props.comments.map((comment, index) => (
