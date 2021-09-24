@@ -61,20 +61,7 @@ margin-top: 50px;
   border-radius: 50px;
   border-color: rgb(192, 173, 211);
 }
-  @keyframes submitEffects {
-    0% {
-      transform:scale(0.95);
-      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
-    }
-    70% {
-      transform: scale(1);
-      box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
-    }
-    100% {
-      transform: scale(0.95);
-      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-    }
-  }
+  
 
 .submit-button:hover {
   background: rgb(209, 182, 235);
@@ -84,7 +71,6 @@ margin-top: 50px;
 .nav-bar {
   display: flex;
   justify-content: center;
-  /* align-self: flex-start; */
   background: none;
   background-blend-mode: soft-light;
   border-bottom: none;
@@ -169,7 +155,7 @@ a:hover {
 .modal-footer {
   border: none;
 }
-
+/* footer */
 .footer {
   position: fixed;
   display: flex;
@@ -187,7 +173,7 @@ a:hover {
   font-size: 16px;
 }
 
-/* Animations */
+/* NAV ANIME */
 .register-name { color:white; }
 .register-name:after, .register-name:before {
   content:"";
@@ -216,8 +202,8 @@ a:hover {
   content:"";
   display: block;
   position: absolute;
-  top: 18%;
-  left: 90.5%;
+  top: 100%;
+  left: 29.3%;
   width: 5%;
   height: 2px;
   background-color: white;
@@ -239,8 +225,8 @@ a:hover {
   content:"";
   display: block;
   position: absolute;
-  top: 18%;
-  left: 60.5%;
+  top: 100%;
+  left: 20.5%;
   width: 5%;
   height: 2px;
   background-color: white;
@@ -250,11 +236,13 @@ a:hover {
 .public-page-font:hover:before {
   top: 0;
   transform: scale(1);
+  color:white
 }
 
 .public-page-font:hover:after {
   top: 0;
   transform: scale(1);
+  color:white
 }
 
 .sign-out { color:white; }
@@ -263,7 +251,7 @@ a:hover {
   display: block;
   position: absolute;
   top: 100%;
-  left: 50;
+  left: 36.5%;
   width: 5%;
   height: 2px;
   background-color: white;
