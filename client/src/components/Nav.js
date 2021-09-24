@@ -20,6 +20,7 @@ export default function Navigation({ authenticated, user, handleLogOut }) {
       </div>
     )
   }
+  // public profile options
   const publicOptions = (
     <Nav.Link href="/register" className="register-name">
       Register
