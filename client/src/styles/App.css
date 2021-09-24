@@ -63,7 +63,7 @@ margin-top: 50px;
   background: rgb(209, 182, 235);
   border-color: rgb(192, 173, 211)
 }
-.submit-button {
+.submit-button, .add-comment-button, .delete-button-modal {
   margin-top: 10px;
   background: rgba(200, 199, 196, 0.38); 
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -72,10 +72,11 @@ margin-top: 50px;
 }
   
 
-.submit-button:hover {
+.submit-button:hover, .add-comment-button:hover, .delete-button-modal:hover  {
   background: rgb(209, 182, 235);
   border-color: rgb(192, 173, 211)
 }
+
 /* NAVIGATION */
 .nav-bar {
   display: flex;
@@ -112,6 +113,8 @@ a:hover {
   margin: 10px;
   box-shadow: white;
 }
+
+.comment-card {background-color: rgba(200, 199, 196, 0.281);;}
 
 /* PHOTOS */
 .photoCard {
