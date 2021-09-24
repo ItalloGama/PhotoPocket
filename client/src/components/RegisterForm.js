@@ -7,6 +7,7 @@ const RegisterForm = (props) => {
       <Form.Group className="name-container" controlId="formBasicName">
         <Form.Label>Name:</Form.Label>
         <Form.Control
+          className="field-decoration"
           type="name"
           name="newName"
           placeholder="enter your name"
@@ -17,6 +18,7 @@ const RegisterForm = (props) => {
       <Form.Group className="email-container" controlId="formBasicEmail">
         <Form.Label>Email:</Form.Label>
         <Form.Control
+          className="field-decoration"
           type="email"
           name="newEmail"
           placeholder="enter your email"
@@ -27,6 +29,7 @@ const RegisterForm = (props) => {
       <Form.Group className="password-container" controlId="formBasicPassword">
         <Form.Label>Password:</Form.Label>
         <Form.Control
+          className="field-decoration"
           type="password"
           name="newPassword"
           placeholder="enter your password"

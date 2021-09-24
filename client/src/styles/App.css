@@ -6,7 +6,15 @@
   background-blend-mode: soft-light;
 }
 
-.back-user{
+.field-decoration{
+  margin-top: 10px;
+  background: rgba(200, 199, 196, 0.38);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  border-color: rgb(192, 173, 211);
+}
+
+.back-user, .admin-font {
   color:white;
   text-decoration: underline;
 }
@@ -27,9 +35,14 @@ justify-content: start;
 flex-direction: column;
 color: white;
 margin-top: 50px;
-
 }
 
+.add-photo-button {
+  background: rgba(200, 199, 196, 0.38);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  border-color: rgb(192, 173, 211);
+}
 .submit-button {
   margin-top: 10px;
   background: rgba(200, 199, 196, 0.38);
@@ -38,7 +51,7 @@ margin-top: 50px;
   border-color: rgb(192, 173, 211);
 }
 .submit-button:hover {
-  background: blueviolet;
+  background: rgb(209, 182, 235);
   border-color: rgb(192, 173, 211)
 }
 /* NAVIGATION */
@@ -71,11 +84,12 @@ a:hover {
 .add-photo-nav {
   display: flex;
   width: 25rem;
-  background-color: #939edc;
-  border: 1px groove #939edc;
-  border-radius: 5px;
+  background-color: rgba(200, 199, 196, 0.29);;
+  border: 1px groove;
+  border-radius: 20px;
   align-self: center;
   margin: 10px;
+  box-shadow: white;
 }
 
 /* PHOTOS */

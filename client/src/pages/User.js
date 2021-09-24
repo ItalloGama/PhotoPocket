@@ -43,7 +43,9 @@ const User = (props) => {
 
   return (
     <div className="page">
-      <NavLink to="/admin">Admin</NavLink>
+      <NavLink to="/admin" className="admin-font">
+        Admin
+      </NavLink>
       <Navbar className="add-photo-nav" expand={false}>
         <Container fluid>
           <Navbar.Brand>Add a new photo...</Navbar.Brand>
