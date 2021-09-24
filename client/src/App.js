@@ -8,6 +8,7 @@ import Public from './pages/Public'
 import ProtectedRoute from './components/ProtectedRoute'
 import Navigation from './components/Nav'
 import { CheckSession } from './services/Auth'
+import Footer from './components/Footer'
 import './styles/App.css'
 
 function App() {
@@ -85,6 +86,7 @@ function App() {
           />
         )}
       </Switch>
+      <Footer />
     </div>
   )
 }
