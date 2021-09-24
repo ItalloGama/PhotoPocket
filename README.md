@@ -14,7 +14,7 @@
 
 - [PhotoPocket Trello Board](https://trello.com/invite/b/RX6rCoOI/ce5e98ae3faf9aabff9f412205f0281d/photographyportfolio)
 - [PhotoPocket Slides](https://docs.google.com/presentation/d/1ollVIBW2RaQoHgyJ9ipOZQrmWLrSA5U2S3im5Pm9uIg/edit#slide=id.p)
-- [PhotoPocket Deployed Link]()
+- [PhotoPocket Deployed Link](https://arcane-tor-98786.herokuapp.com/)
 
 > ## _Technologies used_
 
@@ -54,4 +54,4 @@ Users will be able to register, login and navigate from their user profile. User
 - [x] Integrate Cloudinary or AWS S3 to allow the user to upload their own image files
 - [ ] Add a new table that gives the user the ability to follow other users
 - [ ] Alternate color themes to give the user more creative control
-- [ ]
+
