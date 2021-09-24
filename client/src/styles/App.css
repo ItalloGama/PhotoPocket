@@ -93,13 +93,8 @@ a:hover {
 .page-card {
   display: flex;
   margin: 5px;
-<<<<<<< HEAD
   height: 15rem;
   border-radius: 5px;
-=======
-  width: 9rem;
-  height: 13.5rem;
->>>>>>> 5a494422d494b8714b09a7144b2030073c37c43c
 }
 
 /* COMMENTS */
@@ -110,6 +105,9 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.card-header > .btn {
+  background-color: black;
 }
 /* USER PAGE */
 .user-options {
