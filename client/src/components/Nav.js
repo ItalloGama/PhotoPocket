@@ -17,7 +17,14 @@ export default function Navigation({ authenticated, user, handleLogOut }) {
     <Navbar variant="dark" className="nav-bar">
       <Container>
         <Navbar.Brand href={user && authenticated ? '/user' : '/'}>
-          <img src={logo} margin-right="30" alt="" />
+          <img
+            src={logo}
+            width="120"
+            height="30"
+            margin-right="30"
+            alt=""
+            margin-top="20"
+          />
         </Navbar.Brand>
         <Nav className="me-auto">
           {authenticated && user ? authenticatedOptions : publicOptions}

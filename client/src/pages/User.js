@@ -42,63 +42,66 @@ const User = (props) => {
   }, [])
 
   return (
-    <div className="page">
-      <NavLink to="/admin">Admin</NavLink>
-      <Navbar className="add-photo-nav" expand={false}>
-        <Container fluid>
-          <Navbar.Brand>Add a new photo...</Navbar.Brand>
-          <Navbar.Toggle />
-          <Navbar.Collapse>
-            <Form
-              className="bootstrap-form-contain add-photo"
-              onSubmit={addPhotoToUser}
-            >
-              <Form.Group className="mb-3" controlId="formBasicImage">
-                <Form.Label>Add Photo:</Form.Label>
-                {imageFile ? (
-                  <Form.Control type="text" disabled />
-                ) : (
+    <div className="page user-page">
+      <div className="user-options">
+        <Navbar className="add-photo-nav" expand={false}>
+          <Container fluid>
+            <Navbar.Brand>Add a new photo...</Navbar.Brand>
+            <Navbar.Toggle />
+            <Navbar.Collapse>
+              <Form
+                className="bootstrap-form-contain add-photo"
+                onSubmit={addPhotoToUser}
+              >
+                <Form.Group className="mb-3" controlId="formBasicImage">
+                  <Form.Label>Add Photo:</Form.Label>
+                  {imageFile ? (
+                    <Form.Control type="text" disabled />
+                  ) : (
+                    <Form.Control
+                      type="text"
+                      name="imageUrl"
+                      placeholder="enter photo url"
+                      value={formValues.imageUrl}
+                      onChange={handleChange}
+                    />
+                  )}
+                </Form.Group>
+                <Form.Group className="mb-3">
+                  {formValues.imageUrl ? (
+                    <Form.Control type="file" disabled />
+                  ) : (
+                    <Form.Control
+                      type="file"
+                      // value={imageFile}
+                      onChange={handleFileChange}
+                    />
+                  )}
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicDescription">
+                  <Form.Label>Add Description:</Form.Label>
                   <Form.Control
-                    type="text"
-                    name="imageUrl"
-                    placeholder="enter photo url"
-                    value={formValues.imageUrl}
+                    type="name"
+                    name="description"
+                    placeholder="enter description"
+                    value={formValues.description}
                     onChange={handleChange}
                   />
-                )}
-              </Form.Group>
-              <Form.Group className="mb-3">
-                {formValues.imageUrl ? (
-                  <Form.Control type="file" disabled />
-                ) : (
-                  <Form.Control
-                    type="file"
-                    // value={imageFile}
-                    onChange={handleFileChange}
-                  />
-                )}
-              </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicDescription">
-                <Form.Label>Add Description:</Form.Label>
-                <Form.Control
-                  type="name"
-                  name="description"
-                  placeholder="enter description"
-                  value={formValues.description}
-                  onChange={handleChange}
-                />
-              </Form.Group>
-              <Button
-                variant="primary"
-                type="submit"
-                className="add-photo-button"
-              >
-                ADD
-              </Button>
-            </Form>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+                </Form.Group>
+                <Button
+                  variant="primary"
+                  type="submit"
+                  className="add-photo-button"
+                >
+                  ADD
+                </Button>
+              </Form>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+        <NavLink to="/admin">Admin</NavLink>
+      </div>
+
       <div className="photoCard">
         {photos.map((photo, index) => (
           <PictureCard
