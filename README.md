@@ -10,7 +10,7 @@
 
 | [Jae's GitHub](https://github.com/Jangui92) |[Jae's LinkedIn](https://www.linkedin.com/in/janay-anguiano-778717215/) |
 
-> ## _Getting Started_
+> ## Getting Started
 
 - [PhotoPocket Trello Board](https://trello.com/invite/b/RX6rCoOI/ce5e98ae3faf9aabff9f412205f0281d/photographyportfolio)
 - [PhotoPocket Slides](https://docs.google.com/presentation/d/1ollVIBW2RaQoHgyJ9ipOZQrmWLrSA5U2S3im5Pm9uIg/edit#slide=id.p)
@@ -48,10 +48,11 @@ Users will be able to register, login and navigate from their user profile. User
 - [Bootstrap](https://getbootstrap.com/)
 - [Stack Overflow](https://stackoverflow.com/)
 - [Figma](https://www.figma.com/file/J9hSvvWe8ERhaKt44vYk4D/Untitled?node-id=0%3A1)
+- [Amazon S3](https://aws.amazon.com/pm/serv-s3)
+- [Social Media Links](https://icons8.com/icons/set/social-media)
 
 > ## _Future Updates_
 
 - [x] Integrate Cloudinary or AWS S3 to allow the user to upload their own image files
 - [ ] Add a new table that gives the user the ability to follow other users
 - [ ] Alternate color themes to give the user more creative control
-
