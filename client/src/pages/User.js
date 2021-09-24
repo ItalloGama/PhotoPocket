@@ -100,7 +100,7 @@ const User = (props) => {
           </Container>
         </Navbar>
         <NavLink to={`/public/${props.user.id}`}>Public Page</NavLink>
-        <NavLink to="/admin">Admin</NavLink>
+        <NavLink to="/admin" className="admin-font">Admin</NavLink>
       </div>
 
       <div className="photoCard">

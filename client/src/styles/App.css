@@ -16,8 +16,16 @@ body {
   background-blend-mode: soft-light;
 }
 
-.back-user {
-  color: white;
+.field-decoration{
+  margin-top: 10px;
+  background: rgba(200, 199, 196, 0.38);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  border-color: rgb(192, 173, 211);
+}
+
+.back-user, .admin-font {
+  color:white;
   text-decoration: underline;
 }
 
@@ -28,17 +36,24 @@ body {
 }
 
 .page {
-  /* margin-top: 40px; */
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  flex-direction: column;
-  color: white;
-  margin-top: 50px;
+
+/* margin-top: 40px; */
+height: 100vh;
+width: 100vw;
+display:flex;
+align-items: center;
+justify-content: start;
+flex-direction: column;
+color: white;
+margin-top: 50px;
 }
 
+.add-photo-button {
+  background: rgba(200, 199, 196, 0.38);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  border-color: rgb(192, 173, 211);
+}
 .submit-button {
   margin-top: 10px;
   background: rgba(200, 199, 196, 0.38);
@@ -47,8 +62,8 @@ body {
   border-color: rgb(192, 173, 211);
 }
 .submit-button:hover {
-  background: blueviolet;
-  border-color: rgb(192, 173, 211);
+  background: rgb(209, 182, 235);
+  border-color: rgb(192, 173, 211)
 }
 /* NAVIGATION */
 .nav-bar {
@@ -80,11 +95,12 @@ a:hover {
 .add-photo-nav {
   display: flex;
   width: 25rem;
-  background-color: #939edc;
-  border: 1px groove #939edc;
-  border-radius: 5px;
+  background-color: rgba(200, 199, 196, 0.29);;
+  border: 1px groove;
+  border-radius: 20px;
   align-self: center;
   margin: 10px;
+  box-shadow: white;
 }
 
 /* PHOTOS */

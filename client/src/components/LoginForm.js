@@ -7,6 +7,7 @@ const RegisterForm = (props) => {
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email:</Form.Label>
         <Form.Control
+          className="field-decoration"
           type="email"
           name="email"
           placeholder="example@example.com"
@@ -17,6 +18,7 @@ const RegisterForm = (props) => {
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Password:</Form.Label>
         <Form.Control
+          className="field-decoration"
           type="password"
           name="password"
           placeholder="enter your password"
