@@ -10,7 +10,7 @@ const CommentCard = (props) => {
   }
 
   return (
-    <Card className="mb-2 comment-card" fluid>
+    <Card className="mb-2 comment-card" fluid className="comment-card">
       <Card.Header>
         {props.name}
         <Button onClick={deleteComment}>X</Button>

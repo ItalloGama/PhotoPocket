@@ -71,7 +71,9 @@ const PictureModal = (props) => {
       </Modal.Body>
       <Modal.Footer>
         {props.publicUserId === props.userId ? (
-          <Button onClick={deletePhoto}>DELETE</Button>
+          <Button onClick={deletePhoto} className="delete-button-modal">
+            DELETE
+          </Button>
         ) : undefined}
       </Modal.Footer>
     </Modal>
