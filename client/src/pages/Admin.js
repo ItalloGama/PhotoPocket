@@ -34,6 +34,7 @@ const AdminForm = (props) => {
       </NavLink>
       <Form className="bootstrap-form-contain" onSubmit={updateUserInfo}>
         <Form.Control
+          className="field-decoration"
           type="text"
           name="instagram"
           placeholder="Instagram"
@@ -42,6 +43,7 @@ const AdminForm = (props) => {
         />
         <br />
         <Form.Control
+          className="field-decoration"
           type="text"
           name="facebook"
           placeholder="FaceBook"
@@ -50,6 +52,7 @@ const AdminForm = (props) => {
         />
         <br />
         <Form.Control
+          className="field-decoration"
           type="text"
           name="twitter"
           placeholder="Twitter"
@@ -58,6 +61,7 @@ const AdminForm = (props) => {
         />
         <br />
         <Form.Control
+          className="field-decoration"
           type="text"
           name="aboutMe"
           placeholder="About Me"
