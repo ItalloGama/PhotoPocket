@@ -10,7 +10,7 @@ const PictureModal = (props) => {
   const deletePhoto = async () => {
     await DeletePhoto(props.pictureId)
     props.onHide()
-    props.getUserPhotos()
+    props.getUserPhotos(props.userId)
   }
 
   const handleChange = (e) => {
