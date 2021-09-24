@@ -102,12 +102,6 @@ const User = (props) => {
             </Navbar.Collapse>
           </Container>
         </Navbar>
-        <NavLink to={`/public/${props.user.id}`} className="public-page-font">
-          Public Page
-        </NavLink>
-        <NavLink to="/admin" className="admin-font">
-          Admin
-        </NavLink>
       </div>
 
       <div className="photoCard">
