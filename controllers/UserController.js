@@ -9,7 +9,6 @@ const UpdateUser = async (req, res) => {
     }
   }
   try {
-    console.log(req.body)
     const user = await User.update(
       { ...newData },
       { where: { id: req.params.user_id }, returning: true }
