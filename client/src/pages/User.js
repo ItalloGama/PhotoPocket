@@ -99,6 +99,7 @@ const User = (props) => {
             </Navbar.Collapse>
           </Container>
         </Navbar>
+        <NavLink to={`/public/${props.user.id}`}>Public Page</NavLink>
         <NavLink to="/admin">Admin</NavLink>
       </div>
 

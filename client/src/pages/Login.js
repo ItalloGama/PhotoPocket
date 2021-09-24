@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import LoginForm from '../components/LoginForm'
 import { SignInUser } from '../services/Auth'
 import { Redirect } from 'react-router'
+import logo from '../screenshot/logo2.png'
 
 export default function Login(props) {
   const [formValues, setFormValues] = useState({ email: '', password: '' })
@@ -23,6 +24,7 @@ export default function Login(props) {
 
   return (
     <div className="page">
+      <img src={logo} className="register-logo" />
       <LoginForm
         newEmail={formValues.email}
         newPassword={formValues.password}

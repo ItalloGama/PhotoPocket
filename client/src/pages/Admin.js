@@ -15,7 +15,7 @@ const AdminForm = (props) => {
   const updateUserInfo = async (e) => {
     e.preventDefault()
     await UpdateUser(props.user.id, adminFormValues)
-    // setAdminFormValues(iState)
+    setAdminFormValues(iState)
     // props.history.push('/user')
   }
 
@@ -28,8 +28,8 @@ const AdminForm = (props) => {
   }
 
   return (
-    <div className="admin_form">
-      <NavLink to="/user" onClick={routeToUser}>
+    <div className="admin_form" className="page">
+      <NavLink to="/user" onClick={routeToUser} className="back-user">
         Back to user page
       </NavLink>
       <Form className="bootstrap-form-contain" onSubmit={updateUserInfo}>
