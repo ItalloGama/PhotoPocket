@@ -1,5 +1,5 @@
 import { React, useState } from 'react'
-import { Card, Modal } from 'react-bootstrap'
+import { Card, Modal, Image } from 'react-bootstrap'
 import PictureModal from './PictureModal'
 import { GetComments } from '../services/CommentServices'
 
@@ -24,9 +24,13 @@ function PictureCard(props) {
 
   return (
     <div>
-      <Card className="bg-dark text-white" onClick={showModal}>
-        <Card.Img src={props.img} alt={props.description} />
-      </Card>
+      <Image
+        src={props.img}
+        onClick={showModal}
+        alt={props.description}
+        className="page-card"
+        fluid
+      />
       <PictureModal
         publicUserId={props.publicUserId}
         pictureId={props.pictureId}

@@ -15,7 +15,7 @@ const AdminForm = (props) => {
   const updateUserInfo = async (e) => {
     e.preventDefault()
     await UpdateUser(props.user.id, adminFormValues)
-    // setAdminFormValues(iState)
+    setAdminFormValues(iState)
     // props.history.push('/user')
   }
 

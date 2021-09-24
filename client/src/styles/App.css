@@ -1,33 +1,42 @@
 .App {
   text-align: center;
+}
+
+body {
   width: 100vw;
-  height: 100%;
-  background: linear-gradient(180deg, rgba(175, 173, 245, 0.53) 23.95%, rgba(133, 80, 174, 0.51) 100%, rgba(133, 80, 174, 0.51) 100%, rgba(186, 144, 220, 0.51) 100%, rgba(153, 138, 237, 0.34) 100%);
+  /* height: 100%; */
+  background: linear-gradient(
+    180deg,
+    rgba(175, 173, 245, 0.53) 23.95%,
+    rgba(133, 80, 174, 0.51) 100%,
+    rgba(133, 80, 174, 0.51) 100%,
+    rgba(186, 144, 220, 0.51) 100%,
+    rgba(153, 138, 237, 0.34) 100%
+  );
   background-blend-mode: soft-light;
 }
 
-.back-user{
-  color:white;
+.back-user {
+  color: white;
   text-decoration: underline;
 }
 
 .register-logo {
-width: 300px;
-height: 90px;
-margin-bottom: 60px;
+  width: 300px;
+  height: 90px;
+  margin-bottom: 60px;
 }
 
 .page {
-/* margin-top: 40px; */
-height: 100vh;
-width: 100vw;
-display:flex;
-align-items: center;
-justify-content: start;
-flex-direction: column;
-color: white;
-margin-top: 50px;
-
+  /* margin-top: 40px; */
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  color: white;
+  margin-top: 50px;
 }
 
 .submit-button {
@@ -39,24 +48,18 @@ margin-top: 50px;
 }
 .submit-button:hover {
   background: blueviolet;
-  border-color: rgb(192, 173, 211)
+  border-color: rgb(192, 173, 211);
 }
 /* NAVIGATION */
 .nav-bar {
   display: flex;
-  align-items: center;
+  justify-content: center;
   /* align-self: flex-start; */
-  background: conic-gradient(
-    from 261.19deg at 59.46% 46.15%,
-    rgba(98, 57, 217, 0.89) -52.5deg,
-    rgba(129, 28, 207, 0.57) 232.5deg,
-    rgba(115, 95, 233, 0.894551) 270deg,
-    rgba(98, 57, 217, 0.89) 307.5deg,
-    rgba(129, 28, 207, 0.57) 592.5deg
-  );
-  border-bottom: 5px groove #370617;
+  background: none;
+  background-blend-mode: soft-light;
+  border-bottom: none;
   margin-bottom: 20px;
-  width: 100vw;
+  width: 100%;
   height: 50px;
 }
 .me-auto .navbar-nav {
@@ -88,24 +91,52 @@ a:hover {
 .photoCard {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin: 10px;
 }
-.card {
+.page-card {
+  display: flex;
   margin: 5px;
-  width: 9rem;
-  height: 13.5rem;
+  height: 15rem;
+  border-radius: 5px;
 }
 
 /* COMMENTS */
 .comment-card {
   display: flex;
-  width: 50vw;
 }
 .comment-card > .card-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 50vw;
+}
+.card-header > .btn {
+  background-color: black;
+}
+/* USER PAGE */
+.user-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  width: 100vw;
+}
+.user-page {
+  margin-top: 0;
+}
+/* MODAL */
+.modal-content {
+  background-color: rgba(147, 158, 220, 0.871);
+}
+.modal-header {
+  border: none;
+}
+.modal-body {
+  display: flex;
+  flex-direction: column;
+}
+.modal-footer {
+  border: none;
 }
 
 .footer {
