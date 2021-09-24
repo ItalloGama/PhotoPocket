@@ -7,12 +7,16 @@ export default function Navigation({ authenticated, user, handleLogOut }) {
   let authenticatedOptions
   if (user) {
     authenticatedOptions = (
-      <NavLink onClick={handleLogOut} to="/">
+      <NavLink onClick={handleLogOut} to="/" className="sign-out">
         Sign Out
       </NavLink>
     )
   }
-  const publicOptions = <Nav.Link href="/register">Register</Nav.Link>
+  const publicOptions = (
+    <Nav.Link href="/register" className="register-name">
+      Register
+    </Nav.Link>
+  )
   return (
     <Navbar variant="dark" className="nav-bar">
       <Container>
