@@ -12,10 +12,13 @@
 
 > ## Getting Started
 
-- [PhotoPocket Trello Board](https://trello.com/invite/b/RX6rCoOI/ce5e98ae3faf9aabff9f412205f0281d/photographyportfolio)
-- [PhotoPocket Slides](https://docs.google.com/presentation/d/1ollVIBW2RaQoHgyJ9ipOZQrmWLrSA5U2S3im5Pm9uIg/edit#slide=id.p)
-- [PhotoPocket Deployed Link](https://arcane-tor-98786.herokuapp.com/)
 
+The project is deployed on Heroku and can be viewed [here](https://arcane-tor-98786.herokuapp.com/).
+1. The first page allows you to login to an existing username or create a new one.
+2. Once logged in you can start by adding your social medial links in the Admin page.
+3. Navigating to one of your User page you can use the dropdown menu to add either image links or image files you would like to share.
+4. Finally, by clicking one of these pictures, you can post a comment on the pictures you like!
+5. For more behind the scenes information you can view our trello [here](https://trello.com/invite/b/RX6rCoOI/ce5e98ae3faf9aabff9f412205f0281d/photographyportfolio), and our product pitch [here](https://docs.google.com/presentation/d/1ollVIBW2RaQoHgyJ9ipOZQrmWLrSA5U2S3im5Pm9uIg/edit#slide=id.p).
 > ## _Technologies used_
 
 - Postres
