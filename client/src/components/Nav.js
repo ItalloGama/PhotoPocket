@@ -8,10 +8,10 @@ export default function Navigation({ authenticated, user, handleLogOut }) {
   if (user) {
     authenticatedOptions = (
       <div className="nav-user-options">
-        <NavLink to={`/public/${user.id}`} className="public-page-font">
+        <NavLink to={`/public/${user.id}`} className="sign-out">
           Public Page
         </NavLink>
-        <NavLink to="/admin" className="admin-font">
+        <NavLink to="/admin" className="sign-out">
           Admin
         </NavLink>
         <NavLink onClick={handleLogOut} to="/" className="sign-out">
