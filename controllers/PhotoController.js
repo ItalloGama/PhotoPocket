@@ -32,6 +32,7 @@ const CreatePhoto = async (req, res) => {
       res.send(photo)
     } else if (imageUrl) {
       const photo = await PictureCard.create({
+        userId: user_id,
         img: imageUrl,
         description: description
       })
